@@ -1,20 +1,58 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+svg,
+picture,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Properties */
+:root {
+    --clr-neutral-800: hsl(217 19 35);
+    --clr-neutral-400: hsl(214 17 51);
+    --clr-neutral-200: hsl(212 23 69);
+    --clr-neutral-100: hsl(210 46 95);
+
+    --ff-primary: Manrope;
+
+    --fs-400: 0.625rem;
+    
+    --fw-normal: 500;
+    --fw-bold: 700;
+}
+
+/* Utility classes */
+.ff-primary { font-family: var(--ff-primary); }
+.fs-400 { font-size: var(--fs-400); }
+.fw-normal { font-weight: var(--fw-normal); }
+.fw-bold { font-weight: var(--fw-bold); }
+.clr-neutral-800 { color: var(--clr-neutral-800); }
+.clr-neutral-400 { color: var(--clr-neutral-400); }
+.clr-neutral-200 { color: var(--clr-neutral-200); }
+.clr-neutral-100 { color: var(--clr-neutral-100); }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Frontend Mentor attribution */
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
