@@ -31,10 +31,12 @@ video {
 
   --fs-400: 0.625rem;
   --fs-600: 0.825rem;
+  --fs-700: 1rem;
 
   --fw-normal: 500;
   --fw-bold: 700;
 
+  --lh-300: 0.875rem;
   --lh-400: 1rem;
   --lh-600: 1.25rem;
 }
@@ -49,7 +51,7 @@ body {
 }
 
 .article-preview-component {
-    max-width: 260px;
+    max-width: 260PX;
     background-color: var(--clr-neutral-10);
     margin-inline: auto;
     display: grid;
@@ -57,11 +59,7 @@ body {
     padding-bottom: 1rem;
     border-radius: 0.5rem;
     position: relative;
-}
-
-.wrapper {
-    max-width: 212px;
-    margin-inline: auto;
+    box-shadow: 0 15px 50px -40px var(--clr-neutral-800);
 }
 
 .article-image {
@@ -70,6 +68,13 @@ body {
     width: 260px;
     object-fit: cover;
     object-position: center;
+}
+
+.article-preview-text {
+    display: grid;
+    gap: 1.725rem;
+    max-width: 212px;
+    margin-inline: auto;
 }
 
 .text-section {
@@ -107,7 +112,7 @@ body {
 
 .share-bar {
     position: absolute;
-    display: flex;
+    display: none; /* For now, should be flex later */
     background-color: var(--clr-neutral-800);
     padding: 0.875rem 2rem;
     border-radius: 0.5rem;
@@ -151,6 +156,47 @@ body {
 }
 .display-none {
     display: none;
+}
+
+@media (min-width: 50em) {
+    .article-preview-component {
+        background-color: var(--clr-neutral-10);
+        max-width: 100em;
+        margin-inline: auto;
+        display: flex;
+        gap: 0;
+        border-radius: 0.5rem;
+        position: relative;
+        padding: 0;
+        box-shadow: 0 15px 50px -40px var(--clr-neutral-800);
+    }
+
+    .article-preview-text {
+        display: grid;
+        gap: 0.875rem;
+        max-width: 22em;
+        padding: 1.5rem 2rem;
+    }
+
+    .article-image {
+        border-radius: 0.5rem 0 0 0.5rem;
+        height: 100%;
+        width: 14rem;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .fs-400 {
+        font-size: var(--fs-400);
+        line-height: var(--lh-400);
+        word-spacing: normal;
+    }
+
+    .fs-600 {
+        font-size: var(--fs-700);
+        line-height: var(--lh-600);
+    }
+    
 }
 
 /* Frontend Mentor attribution */
