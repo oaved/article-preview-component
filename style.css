@@ -25,24 +25,98 @@ video {
   --clr-neutral-400: hsl(214 17 51);
   --clr-neutral-200: hsl(212 23 69);
   --clr-neutral-100: hsl(210 46 95);
+  --clr-neutral-10: hsl(0 0 100);
 
   --ff-primary: Manrope;
 
   --fs-400: 0.625rem;
+  --fs-600: 0.825rem;
 
   --fw-normal: 500;
   --fw-bold: 700;
+
+  --lh-400: 1rem;
+  --lh-600: 1.25rem;
 }
 
 /* Components */
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--clr-neutral-100);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
 
+.article-preview-component {
+    max-width: 275px;
+    background-color: var(--clr-neutral-10);
+    margin-inline: auto;
+    display: grid;
+    gap: 1.725rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.wrapper {
+    max-width: 212px;
+    margin-inline: auto;
+}
+
+.article-image {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.text-section {
+    display: grid;
+    gap: 0.625rem;
+}
+
+.profile-section {
+    width: 100%;
+    display: flex;
+    gap: 0.625rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.name-date-group {
+    flex: 1;
+    display: grid;
+}
+
+
+.share-button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    border: none;
+    background-color: var(--clr-neutral-100);
+}
+
+.share-bar {
+    display: none;
+}
 
 /* Utility classes */
 .ff-primary {
   font-family: var(--ff-primary);
+  word-spacing: 0.15ch;
 }
 .fs-400 {
   font-size: var(--fs-400);
+  line-height: var(--lh-400);
+  word-spacing: 0.3ch;
+}
+.fs-600 {
+    font-size: var(--fs-600);
+    line-height: var(--lh-600);
 }
 .fw-normal {
   font-weight: var(--fw-normal);
