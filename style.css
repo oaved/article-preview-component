@@ -56,6 +56,7 @@ body {
     gap: 1.725rem;
     padding-bottom: 1rem;
     border-radius: 0.5rem;
+    position: relative;
 }
 
 .wrapper {
@@ -105,7 +106,15 @@ body {
 }
 
 .share-bar {
-    display: none;
+    position: absolute;
+    display: flex;
+    background-color: var(--clr-neutral-800);
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    align-items: center;
+    bottom: 0;
+    left: 0;
 }
 
 /* Utility classes */
@@ -139,6 +148,9 @@ body {
 }
 .clr-neutral-100 {
   color: var(--clr-neutral-100);
+}
+.display-none {
+    display: none;
 }
 
 /* Frontend Mentor attribution */
