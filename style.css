@@ -108,11 +108,17 @@ body {
     place-content: center;
     border: none;
     background-color: var(--clr-neutral-100);
+    transition: all 0.25s ease;
+}
+
+.share-button:hover {
+    cursor: pointer;
+    filter: brightness(96%);
 }
 
 .share-bar {
     position: absolute;
-    display: none; /* For now, should be flex later */
+    display: flex;
     background-color: var(--clr-neutral-800);
     padding: 0.875rem 2rem;
     border-radius: 0.5rem;
