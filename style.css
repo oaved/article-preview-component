@@ -85,7 +85,8 @@ body {
 .profile-section {
     width: 100%;
     display: flex;
-    gap: 0.625rem;
+    align-items: center;
+    gap: 0.875rem;
 }
 
 .profile-picture {
@@ -102,8 +103,8 @@ body {
 
 .share-button {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     display: grid;
     place-content: center;
     border: none;
@@ -116,16 +117,38 @@ body {
     filter: brightness(96%);
 }
 
+.share-button img {
+    width: 12px;
+}
+
 .share-bar {
     position: absolute;
     display: flex;
     background-color: var(--clr-neutral-800);
-    padding: 0.875rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 0.5rem;
     gap: 1rem;
     align-items: center;
-    bottom: 0;
-    left: 0;
+    bottom: 4.5rem;
+    right: -4.5rem;
+    box-shadow: 0 10px 35px -15px var(--clr-neutral-800);
+    z-index: 10;
+}
+
+.share-bar::before {
+    content: " ";
+    position: absolute;
+    background: var(--clr-neutral-800);
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 42%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.share-bar h2 {
+    letter-spacing: 0.75ch;
 }
 
 /* Utility classes */
